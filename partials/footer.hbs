@@ -1,0 +1,52 @@
+<footer class="bg-warm-black py-16 px-6">
+  <div class="container mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div class="md:col-span-2">
+        <div class="text-3xl font-playfair font-bold text-golden-hour mb-4">{{@site.title}}</div>
+        <p class="text-silver-highlight leading-relaxed mb-6 max-w-md">
+          Crafting compelling visual narratives that resonate with audiences worldwide. Every frame tells a story, every story matters.
+        </p>
+        <div class="space-y-3 text-sm text-film-grain">
+          <div class="flex items-center space-x-3"><span class="text-golden-hour">✉</span><span>hello@cinecraft.studio</span></div>
+          <div class="flex items-center space-x-3"><span class="text-golden-hour">☎</span><span>+1 (555) 123-4567</span></div>
+          <div class="flex items-center space-x-3"><span class="text-golden-hour">📍</span><span>Los Angeles, CA</span></div>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-montserrat font-semibold text-white mb-6 tracking-wide">Quick Links</h4>
+        <ul class="space-y-3">
+          {{#foreach navigation}}
+            <li><a href="{{url}}" class="text-film-grain hover:text-golden-hour transition-colors duration-300 story-link">{{label}}</a></li>
+          {{/foreach}}
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-montserrat font-semibold text-white mb-6 tracking-wide">Services</h4>
+        <ul class="space-y-3 text-film-grain">
+          <li>Cinematography</li>
+          <li>Music Videos</li>
+          <li>Documentaries</li>
+          <li>Commercial Work</li>
+          <li>Color Grading</li>
+          <li>Post-Production</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-golden-hour/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+      <div class="flex space-x-6 mb-4 md:mb-0">
+        <a href="#" class="text-film-grain hover:text-golden-hour transition-colors duration-300">Instagram</a>
+        <a href="#" class="text-film-grain hover:text-golden-hour transition-colors duration-300">YouTube</a>
+        <a href="#" class="text-film-grain hover:text-golden-hour transition-colors duration-300">Twitter</a>
+        <a href="#" class="text-film-grain hover:text-golden-hour transition-colors duration-300">LinkedIn</a>
+      </div>
+      <div class="text-sm text-film-grain">
+        <p>&copy; 2024 {{@site.title}}. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="mt-12 text-center bg-gradient-golden/10 rounded-lg p-8">
+      <h3 class="text-2xl font-playfair font-bold text-white mb-4">Ready to Create Something Amazing?</h3>
+      <p class="text-silver-highlight mb-6 max-w-md mx-auto">Let's discuss your next project and bring your vision to life.</p>
+      <a href="#contact" class="inline-flex items-center justify-center h-12 px-8 py-3 text-base bg-golden-hour text-warm-black hover:bg-golden-hour/90 font-montserrat tracking-wide rounded-md transition-all duration-300 hover:shadow-glow">Start a Conversation</a>
+    </div>
+  </div>
+</footer>

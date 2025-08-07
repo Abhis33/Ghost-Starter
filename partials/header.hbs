@@ -1,0 +1,39 @@
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <div class="text-2xl font-playfair font-bold text-golden-hour">
+        <a href="{{@site.url}}">
+          {{#if @site.logo}}
+            <img src="{{@site.logo}}" alt="{{@site.title}}" class="h-8 w-auto"/>
+          {{else}}
+            {{@site.title}}
+          {{/if}}
+        </a>
+      </div>
+      <nav class="hidden md:flex items-center space-x-8">
+        {{#foreach navigation}}
+          <a href="{{url}}" class="text-silver-highlight hover:text-golden-hour transition-colors duration-300 font-montserrat text-sm tracking-wider story-link">{{label}}</a>
+        {{/foreach}}
+      </nav>
+      <div class="flex items-center space-x-4">
+        {{search}}
+        <button id="mobile-menu-btn" class="md:hidden">
+          <span class="sr-only">Menu</span>
+          <svg class="h-6 w-6 text-silver-highlight" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="md:hidden hidden absolute top-full left-0 right-0 bg-warm-black/95 backdrop-blur-md">
+    <nav class="flex flex-col space-y-4 px-6 py-8">
+      {{#foreach navigation}}
+        <a href="{{url}}" class="text-silver-highlight hover:text-golden-hour transition-colors duration-300 font-montserrat text-lg tracking-wider">{{label}}</a>
+      {{/foreach}}
+      <div class="pt-4 border-t border-golden-hour/20">
+        <a href="#contact" class="inline-flex items-center justify-center h-12 px-8 py-3 text-base bg-golden-hour text-warm-black hover:bg-golden-hour/90 font-montserrat tracking-wide rounded-md transition-all duration-300">Get in Touch</a>
+      </div>
+    </nav>
+  </div>
+</header>
