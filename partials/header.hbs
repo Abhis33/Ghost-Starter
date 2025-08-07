@@ -1,0 +1,29 @@
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+    <a class="text-2xl font-playfair font-bold text-golden-hour" href="{{@site.url}}">
+      {{@site.title}}
+    </a>
+
+    <nav class="hidden md:flex items-center space-x-8">
+      {{navigation}}
+    </nav>
+
+    <div class="flex items-center space-x-4">
+      <button class="hidden md:flex">
+        <svg class="h-5 w-5 text-silver-highlight hover:text-golden-hour"></svg>
+      </button>
+      <button class="md:hidden js-mobile-menu" aria-label="Toggle menu">
+        <svg class="h-6 w-6 text-silver-highlight"></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav hidden md:hidden absolute top-full left-0 right-0 bg-warm-black/95 backdrop-blur-md">
+    <nav class="flex flex-col space-y-4 px-6 py-8">
+      {{navigation}}
+      <div class="pt-4 border-t border-golden-hour/20">
+        <a class="btn-hero w-full" href="#contact">Get in Touch</a>
+      </div>
+    </nav>
+  </div>
+</header>
